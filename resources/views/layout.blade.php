@@ -8,4 +8,4 @@
             @yield('content')
         </div>
     </body>
-</html>ok
+</html>
