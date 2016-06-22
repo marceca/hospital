@@ -5,18 +5,18 @@
 
 <form method="POST" action="/updateUser/{{ $userData->id }}">
     {{ method_field('PATCH') }}
-
+    {{ csrf_field() }}
     <h4>Edit Name: </h4><div class="form-group">
-        <textarea name="name" class="form-control">{{ $userData->name }}</textarea>
+        <textarea name="name" class="form-control" placeholder="{{ $userData->name }}"></textarea>
     </div>
     <h4>Edit Address: </h4><div class="form-group">
-        <textarea name="address" class="form-control">{{ $userData->address }}</textarea>
+        <textarea name="address" class="form-control" placeholder="{{ $userData->address }}"></textarea>
     </div>
     <h4>Edit City: </h4><div class="form-group">
-        <textarea name="city" class="form-control">{{ $userData->city }}</textarea>
+        <textarea name="city" class="form-control" placeholder="{{ $userData->city }}"></textarea>
     </div>
     <h4>Edit State</h4><div class="form-group">
-        <textarea name="state" class="form-control">{{ $userData->state }}</textarea>
+        <textarea name="state" class="form-control" placeholder="{{ $userData->state }}"></textarea>
     </div>
     <div class="form-group">
         <button type="submit" class="btn btn-primary">Update Patient</button>

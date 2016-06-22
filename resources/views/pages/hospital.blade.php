@@ -14,7 +14,9 @@
         </thead>
 
         @foreach($userData as $user)
-            <tr><td><a href="/hospital/{{ $user->id }}">{{ $user->name }}</a></td><td>{{ $user->address}}</td><td>{{ $user->city}}</td><td>{{ $user->state }}</td></tr>
+            <tbody>
+                <tr><td><a href="/hospital/{{ $user->id }}">{{ $user->name }}</a></td><td>{{ $user->address}}</td><td>{{ $user->city}}</td><td>{{ $user->state }}</td></tr>
+            </tbody>
         @endforeach
     </table>
 @stop
