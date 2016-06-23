@@ -8,7 +8,7 @@
                 <div class="panel-heading">Welcome</div>
 
                 <div class="panel-body">
-                    Your Application's Landing Page.
+                    Welcome would you like to <a class="btn btn-default" href="/hospital">edit</a> a user.
                 </div>
             </div>
         </div>

@@ -30,7 +30,27 @@ class HospitalController extends Controller
             return view('pages.edit', ['userData' => $userData]);
         }
 
+    public function store(Request $request, userData $userData){
+        $this->validate($request, [
+            'name' => 'required|min:10',
+            'name' => 'required|min:10'
+        ]);
+
+        $note = new Note($request->all());
+
+        $card->addNote($note, 1);
+
+        return back();
+    }
+
         public function update(Request $request, userData $userData){
+            $this->validate($request, [
+                'name' => 'required|min:1',
+                'address' => 'required|min:1',
+                'city' => 'required|min:1',
+                'state' => 'required|:1',
+            ]);
+
             $userData->update($request->all());
 
             $userData = DB::table('userData')->get();
