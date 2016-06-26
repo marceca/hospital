@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.app')
 
 @section('content')
 <h1>Edit Patient - {{ $userData->name }}</h1>
@@ -7,16 +7,16 @@
     {{ method_field('PATCH') }}
     {{ csrf_field() }}
     <h4>Edit Name: </h4><div class="form-group">
-        <textarea name="name" class="form-control" placeholder="{{ $userData->name }}"></textarea>
+        <textarea name="name" class="form-control" placeholder="{{ $userData->name }}">{{ $userData->name }}</textarea>
     </div>
     <h4>Edit Address: </h4><div class="form-group">
-        <textarea name="address" class="form-control" placeholder="{{ $userData->address }}"></textarea>
+        <textarea name="address" class="form-control" placeholder="{{ $userData->address }}">{{ $userData->address }}</textarea>
     </div>
     <h4>Edit City: </h4><div class="form-group">
-        <textarea name="city" class="form-control" placeholder="{{ $userData->city }}"></textarea>
+        <textarea name="city" class="form-control" placeholder="{{ $userData->city }}">{{ $userData->city }}</textarea>
     </div>
     <h4>Edit State</h4><div class="form-group">
-        <textarea name="state" class="form-control" placeholder="{{ $userData->state }}"></textarea>
+        <textarea name="state" class="form-control" placeholder="{{ $userData->state }}">{{ $userData->state }}</textarea>
     </div>
     <div class="form-group">
         <button type="submit" class="btn btn-primary">Update Patient</button>

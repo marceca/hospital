@@ -33,7 +33,7 @@ class HospitalController extends Controller
     public function store(Request $request, userData $userData){
         $this->validate($request, [
             'name' => 'required|min:10',
-            'name' => 'required|min:10'
+            'address' => 'required|min:10'
         ]);
 
         $note = new Note($request->all());
@@ -46,10 +46,10 @@ class HospitalController extends Controller
         public function update(Request $request, userData $userData){
             $this->validate($request, [
                 'name' => 'required|min:1',
-                'address' => 'required|min:1',
-                'city' => 'required|min:1',
-                'state' => 'required|:1',
+
             ]);
+
+           // dd($request->all());
 
             $userData->update($request->all());
 
